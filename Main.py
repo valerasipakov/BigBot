@@ -285,7 +285,7 @@ SaveYourself14 = 'При повышении температуры, появле
 SaveYourselfList = [SaveYourself1, SaveYourself2, SaveYourself3, SaveYourself4, SaveYourself5, SaveYourself6, SaveYourself7, SaveYourself8, SaveYourself9, SaveYourself10, SaveYourself11, SaveYourself12, SaveYourself13, SaveYourself14, ]
 
 #bot token
-token  = "1218528181:AAE0ETqB6DRo-1C4kcaGHavscbrtFDGxtSI"
+token  = "токен"
 bot = telebot.TeleBot(token)
 
 
