@@ -9,299 +9,284 @@ from telebot import types
 # Main menu markup 
 markup = types.ReplyKeyboardMarkup(resize_keyboard =True)
 
-item1 = "TV Series"
+main_menu_item1 = "Бот"
 
-item2 = "Films"
+main_menu_item2= "Коронавирус"
 
-item3 = "Book"
+markup.add(main_menu_item1, main_menu_item2)
 
-item4 = "Test"
+Back = "Основное меню"
 
-markup.add(item1, item2, item3, item4)
+# virus menu markup 
+virus_markup = types.ReplyKeyboardMarkup(resize_keyboard =True)
+
+virus_menu_item1 ="Факты о вирусе"
+
+virus_menu_item2 ="Как выжить?"
+
+virus_menu_item3 ="Последие новости"
+
+virus_markup.add(virus_menu_item1, virus_menu_item2, virus_menu_item3, Back)
+
+# bot menu markup 
+bot_markup = types.ReplyKeyboardMarkup(resize_keyboard =True)
+
+bot_menu_item1 = "топ 15 книг"
+
+bot_menu_item2 = "топ 15 фильмов"
+
+bot_menu_item3 = "топ 15 сериалов"
+
+bot_menu_item4 = "Поиск нового."
+
+
+bot_markup.add(bot_menu_item1, bot_menu_item2, bot_menu_item3, bot_menu_item4, Back)
+
+
 
 # Series markup 
 markupSeries = types.ReplyKeyboardMarkup(resize_keyboard = True)
 
-Series1 ="Friends"
+Series1 ="Друзья"
 
-Series2 = "Game of Thrones"
+Series2 = "Игра престолов"
 
-Series3 = "Boardwalk Empire"
+Series3 = "Подпольная империя"
 
-Series4 = "Breaking Bad"
+Series4 = "Во все тяжкие"
 
-Series5 = "Planet Earth"
+Series5 = "Планета Земля"
 
-Series6 = "Chernobyl"
+Series6 = "Чернобыль"
 
-Series7 = "House, M.D."
+Series7 = "Доктор Хаус"
 
-Series8 = "Sherlock "
+Series8 = "Шерлок"
 
-Series9 = "Peaky Blinders"
+Series9 = "Острые козырьки"
 
-Series10 = "True Detective"
+Series10 = "Настоящий детектив"
 
-Series11 = "Firefly"
+Series11 = "13 причин почему"
 
-Series12 = "The Big Bang Theory"
+Series12 = "Теория большого взрыва"
 
-Series13 = "Band of Brothers"
+Series13 = "Братья по оружию"
 
-Series14 = "Sex Education"
+Series14 = "Половое воспитание"
 
-Series15 = "The Sopranos"
-
-SeriesBack = "Main menu"
-
-markupSeries.add(Series1, Series2, Series3, Series4, Series5, Series6, Series7, Series8, Series9, Series10, Series11, Series12, Series13, Series14, Series15, SeriesBack)
+Series15 = "Клан Сопрано"
 
 
 
-
-#top 15 series 
-Top15serieslist = '''
- 1-Friends (1994-2004)
-
- 2-Game of Thrones (2011 – 2019)
- 
- 3-Boardwalk Empire (2010 – 2014)
- 
- 4-Breaking Bad (2008 – 2013)
- 
- 5-Planet Earth (2006)
- 
- 6-Chernobyl (2019)
- 
- 7-House, M.D. (2004 – 2012)
- 
- 8-Sherlock (2010 – ...)
- 
- 9-Peaky Blinders (2013 – …)
- 
- 10-True Detective (2014 – ...)
- 
- 11-Firefly (2002 – 2003)
- 
- 12-The Big Bang Theory (2007 – 2019)
- 
- 13-Band of Brothers (2001)
- 
- 14-Sex Education (2019-...)
- 
- 15-The Sopranos(1999 – 2007)'''
+markupSeries.add(Series1, Series2, Series3, Series4, Series5, Series6, Series7, Series8, Series9, Series10, Series11, Series12, Series13, Series14, Series15, Back)
 
 
-
-
-
-
-# Series info + poster 
-
-
-
-#top 15 films
-Top15Films = '''
-1 - The Lord of the Rings: The Return of the King
-
-2 - Terminator
-
-3 - The Shawshank Redemption
-
-4 - Forrest Gump
-
-5 - Schindler`s List
-
-6 - Titanic
-
-7 - The Green Mile
-
-8 - Avatar
-
-9 - Иван Васильевич меняет профессию
-
-10 - Back to the Future
-
-11 - The Matrix
-
-12 - The Godfather
-
-13 - The Dark Knight
-
-14 - Gladiator
-
-15 - Braveheart
-'''
 # top 15 films markup 
-Films1 ="The Lord of the Rings: The Return of the King"
+Films1 ="Властелин колец"
 
-Films2 = "Terminator"
+Films2 = "Терминатор"
 
-Films3 = "The Shawshank Redemption"
+Films3 = "Побег из Шоушенка"
 
-Films4 = "Forrest Gump"
+Films4 = "Форрест Гамп"
 
-Films5 = "Schindler`s List"
+Films5 = "Список Шиндлера"
 
-Films6 = "Titanic"
+Films6 = "Титаник"
 
-Films7 = "The Green Mile"
+Films7 = "Зелёная миля"
 
-Films8 = "Avatar"
+Films8 = "Аватар"
 
 Films9 = "Иван Васильевич меняет профессию"
 
-Films10 = "Back to the Future"
+Films10 = "Назад в будущее"
 
-Films11 = "The Matrix"
+Films11 = "Матрица"
 
-Films12 = "The Godfather"
+Films12 = "Крёстный отец"
 
-Films13 = "The Dark Knight"
+Films13 = "Тёмный рыцарь"
 
-Films14 = "Gladiator"
+Films14 = "Гладиатор"
 
-Films15 = "Braveheart"
+Films15 = "Храброе сердце"
 
 markupFilms = types.ReplyKeyboardMarkup(resize_keyboard = True)
 
 
-markupFilms.add(Films1, Films2, Films3, Films4, Films5, Films6, Films7, Films8, Films9, Films10, Films11, Films12, Films13, Films14, Films15, SeriesBack)
+markupFilms.add(Films1, Films2, Films3, Films4, Films5, Films6, Films7, Films8, Films9, Films10, Films11, Films12, Films13, Films14, Films15, Back)
 
 
-Top15Book = '''
-1 - Big Sky
-2 - Sweet Sorrow
-3 - Machines Like Me
-4 - Normal People
-5 - The Silent Patient
-6 - Those People
-7 - The Sleepwalker
-8 - No Way Out
-9 - The Garden of Lost and Found
-10 - After the End
-11 - The Flatshare
-12 - Queenie
-13 - The Doll Factory
-14 - City of Girls
-15 - Circe
-'''
-Book1 = 'Big Sky'
-Book2 = 'Sweet Sorrow'
-Book3 = 'Machines Like Me'
-Book4 = 'Normal People'
-Book5 = 'The Silent Patient'
-Book6 = ' Those People'
-Book7 = 'The Sleepwalker'
-Book8 = 'No Way Out'
-Book9 = 'The Garden of Lost and Found'
-Book10 = 'After the End'
-Book11 = 'The Flatshare'
-Book12 = 'Queenie'
-Book13 = 'The Doll Factory'
-Book14 = 'City of Girls'
-Book15 = "Circe"
-BooBack = "Main menu"
+# top 15 book markup 
+
+Book1 = 'Большое небо'
+Book2 = 'Сто тысяч раз прощай '
+Book3 = 'Машины как я'
+Book4 = 'Нормальные люди'
+Book5 = 'Безмолвный пациент '
+Book6 = 'Эти люди'
+Book7 = 'Лунатик'
+Book8 = 'За закрытыми дверями'
+Book9 = 'Сад потерянных и найденных людей'
+Book10 = 'После конца'
+Book11 = 'Квартирный вопрос'
+Book12 = 'Квини'
+Book13 = 'Мастерская кукол'
+Book14 = 'Город женщин'
+Book15 = "Цирцея"
 markupBook = types.ReplyKeyboardMarkup(resize_keyboard = True)
-markupBook.add(Book1, Book2, Book3, Book4, Book5, Book6, Book7, Book8, Book9, Book10, Book11, Book12, Book13, Book14, Book15, BooBack)
-
-#top 15 films + poster  
+markupBook.add(Book1, Book2, Book3, Book4, Book5, Book6, Book7, Book8, Book9, Book10, Book11, Book12, Book13, Book14, Book15, Back)
 
 
+#top 15 series 
+Top15serieslist = '''
+ 1-Друзья (1994-2004)
 
-#Test markup 
-markupTest = types.ReplyKeyboardMarkup(resize_keyboard =True)
-agree = "I agree"
-disagree = "I disagree"
-markupTest.add(agree, disagree, SeriesBack)
+ 2-Игра престолов (2011 – 2019)
+ 
+ 3-Подпольная империя (2010 – 2014)
+ 
+ 4-Во все тяжкие (2008 – 2013)
+ 
+ 5-Планета Земля (2006)
+ 
+ 6-Чернобыль (2019)
+ 
+ 7-Доктор Хаус (2004 – 2012)
 
-markupHobbi = types.ReplyKeyboardMarkup(resize_keyboard =True)
+ 8 -Шерлок (2010 – ...)
+ 
+ 9-Острые козырьки (2013 – …)
+ 
+ 10-Настоящий детектив (2014 – ...)
+ 
+ 11-13 причин почему (2017-...)
+ 
+ 12-Теория большого взрыва (2007 – 2019)
+ 
+ 13-Братья по оружию (2001)
+ 
+ 14-Половое воспитание(2019-...)
 
-''' hobbi markup '''
-sport = "I like sports"
-
-art = "I like art"
-
-cooking = "I like cooking"
-
-motorist = "I am motorist"
-
-gamesIT = "I like video games and IT"
-
-music = "I like music"
-
-markupHobbi.add(sport, art, cooking, motorist, gamesIT, music, SeriesBack)
-
-# ????  
-Sport = False
-
-Art = False
-
-Cooking = False
-
-Motorist = False
-
-It = False
-
-Music = False
+ 15-Клан Сопрано(1999 – 2007)'''
 
 
+#top 15 book
+Top15Book = '''
+1 - Большое небо
+2 - Сто тысяч раз прощай 
+3 - Машины как я
+4 - Нормальные люди
+5 - Безмолвный пациент 
+6 - Эти люди
+7 - Лунатик
+8 - За закрытыми дверями
+9 - Сад потерянных и найденных людей
+10 - После конца 
+11 - Квартирный вопрос
+12 - Квини (Кэндис Карти-Уильямс)
+13 - Мастерская кукол
+14 - Город женщин
+15 - Цирцея
+'''
+
+#top 15 films
+Top15Films = '''
+1 -Властелин колец
+
+2 - Терминатор
+
+3 - Побег из Шоушенка
+
+4 - Форрест Гамп
+
+5 - Список Шиндлера
+
+6 - Титаник
+
+7 - Зелёная миля
+
+8 - Аватар
+
+9 - Иван Васильевич меняет профессию
+
+10 - Назад в будущее
+
+11 - Матрица
+
+12 - Крёстный отец
+
+13 - Тёмный рыцарь
+
+14 - Гладиатор
+
+15 - Храброе сердце
+'''
+
+#virus fakt list
+Fakt1 = "COVID-19 обычно не распространяется на большие расстояния. Заражение воздушно‑капельным путём наиболее вероятно лишь при тесном контакте с больным."
+
+Fakt2 ="Большинство из заразившихся работников больниц были инфицированы либо дома, либо на ранней стадии вспышки в Ухане, когда ещё не были приняты все меры предосторожности "
+
+Fakt3 = "Продолжительность болезни обычно составляет две недели. В тяжёлых случаях — от 3 до 6 недель."
+
+Fakt4 ="Случаи, когда у инфицированных не проявлялись симптомы заболевания, очень редки. Чаще всего вирус даёт о себе знать в течение нескольких дней после заражения."
+
+Fakt5 = "Наиболее распространёнными симптомами являются: жар (88%) и сухой кашель (68%), недомогание (38%), отхаркивание слизи при кашле (33%), одышка (18%), боль в горле (14%), головные боли (14%), мышечные боли (14%), озноб (11%)"
+
+Fakt6 = "Китай уже проверил различные методы лечения заболевания, и самые успешные из них были внедрены по всей стране. Благодаря этому уровень смертности сейчас ниже, чем месяц назад."
+
+Fakt7 = "Чем вы моложе, тем меньше вероятность заражения и осложнений при инфицировании. На данный момент 72,8% заражённых — люди старше 40 лет. Дети и молодёжь до 19 лет — 2,1% заражённых"
+
+Fakt8 = "Коронавирусы известны человечеству уже на протяжении полувека, впервые коронавирусы были открыты в 1965 году прошлого века."
+
+Fakt9 = "На протяжении вот уже 55 лет, каждый год, в каждом сезоне оcень-весна, человечество постоянно и глобально болеет коронавирусами. Всем известный диагноз — ОРВИ (острый респираторный вирус), и был всегда коронавирусной инфекцией."
+
+Fakt10 = "Массовая вакцинация от гриппа, которая в последние годы приобрела во многих странах массовый характер, возможно, дала коронавирусной инфекции шанс развиться, устранив или ослабив её природного противника — вирус гриппа."
+
+Fakt11 = "Известные болезни животных, такие как энтерит — это тоже коронавирус. Но этот коронавирус не передаётся человеку и является коронавирусом животного."
+
+Fakt12 = "факт"
 
 
 
+VirusHack = [Fakt1, Fakt2, Fakt3, Fakt4, Fakt5, Fakt6, Fakt7, Fakt8, Fakt9, Fakt10, Fakt11, Fakt12 ]
 
-''' test question + list '''
-Testquestion1 = '1. You suffer from insomnia.'
+SaveYourself1 = 'При возможности избегайте мест скопления людей.'
 
-Testquestion2 = '2. You often have a headache.'
+SaveYourself2 = 'Если погода позволяет, ходите на улицу в перчатках, используйте санитайзер'
 
-Testquestion3 = '3. You feel moody by the end of the day.'
+SaveYourself3 = 'При кашле и чихании прикрывайте рот и нос салфеткой или сгибом локтя. Сразу выкидывайте салфетку в контейнер для мусора с крышкой и обрабатывайте руки спиртосодержащим антисептиком или мойте их водой с мылом.'
 
-Testquestion4 = '4. You regularly cry.'
+SaveYourself4 = 'Не трогайте руками глаза, нос и рот. Как свои так и людей рядом'
 
-Testquestion5 = '5. At the end of the work/school day , do you sometimes feel like it is all useless?'
+SaveYourself5 = 'Держитесь от людей на расстоянии минимум двух метров.'
 
-Testquestion6 = '6. You frequently cannot make up your mind.'
+SaveYourself6 = 'Избегайте общественного транспорта.'
 
-Testquestion7 = '7. You feel anxious even in front of your close friends.'
+SaveYourself7 = 'При возможности используйте лифт, чтобы не трогать перила при ходьбе по лестнице, но в лифт с другими людьми не заходите.'
 
-Testquestion8 = '8. You turn pale in awkward situations.'
+SaveYourself8 = 'Перед входом в дом, обработайте руки санитайзером, затем вымойте руки с мылом.'
 
-Testquestion9 = '9. Do you ever eat without feeling hungry?'
+SaveYourself9 = 'Не ходите дома в уличной одежде! На ней может оказаться вирус.'
 
-Testquestion10 = '10. It is very difficult for you to get out of bed in the morning.'
+SaveYourself10 = 'Не зовите гостей и не ходите в гости (но это же вас не остановит?)'
 
-Testquestion11 = '11. There are more gloomy and irritable people around these days.'
+SaveYourself11 = 'Следите за влажностью помещения. Чем выше влажность, тем легче вирусу попасть в ваш организм!'
 
-Testquestion12 = '12. You want silence.'
+SaveYourself12 = 'Пейте больше жидкости — обезвоживание приводит к сухости слизистых и снижает их защитную функцию.'
 
-Testquestion13 = '13. You often get chills.'
+SaveYourself13 = 'Особенно берегите близких старшего возраста. Они в зоне риска и имкак никогда нужна помощь!.'
 
-Testquestion14 = '14. You feel like you’ve become overly sentimental.'
+SaveYourself14 = 'При повышении температуры, появлении кашля и затруднении дыхания как можно быстрее вызывайте скорую (103 с мобильного) Если не получить своевременной помощи вы можете даже умереть!'
 
-Testquestion15 = '15. Bright sunlight hurts your eyes.'
-
-
-TestquestionList = [Testquestion1, Testquestion2, Testquestion3, Testquestion4, Testquestion5, Testquestion6, Testquestion7, Testquestion8, Testquestion9, Testquestion10, Testquestion11, Testquestion12, Testquestion13, Testquestion14, Testquestion15, "Here are some personalized recommendations for you", "good"]
-
-# counters  
-# points for test logic 
-points = 0
-# i for the cycle  
-i = 1
-# firstq check that the message is output 1 time  
-firstq = 0
-# a check that the message is output 1 time  
-a = 0
-
-
-
-
+SaveYourselfList = [SaveYourself1, SaveYourself2, SaveYourself3, SaveYourself4, SaveYourself5, SaveYourself6, SaveYourself7, SaveYourself8, SaveYourself9, SaveYourself10, SaveYourself11, SaveYourself12, SaveYourself13, SaveYourself14, ]
 
 #bot token
-token  = "*token*"
+token  = "1218528181:AAE0ETqB6DRo-1C4kcaGHavscbrtFDGxtSI"
 bot = telebot.TeleBot(token)
-
 
 
 # message handling 
@@ -314,365 +299,92 @@ def send_welcome(message):
 @bot.message_handler(func=lambda message: True)
 def text(message):
 
-	global i
-	global a
-	global Sport
-	global It 
-	global Art
-	global Music
-	global Motorist
-	global points 
-	global Cooking
+	if message.text.lower() == 'бот':
+		bot.send_message(message.chat.id, "Бот к Вашим услугам", reply_markup = bot_markup )
 
-# test logik
-	if message.text.lower() == "test":
-		bot.send_message(message.chat.id, "We have 16 questions for you", reply_markup=markupTest)
-		bot.send_message(message.chat.id, TestquestionList[i-1])
-	
-		
-	if message.text.lower() == ("i agree") :
-		bot.send_message(message.chat.id, TestquestionList[i]) 
-		i = i+1
-		points = points + 1
+	if message.text.lower() == "коронавирус":
+		bot.send_message(message.chat.id, "Коронавирус - это чудо чудесное!", reply_markup = virus_markup)
+# virus menu
 
-	
-	if(message.text.lower() == ("i disagree")):
-		bot.send_message(message.chat.id, TestquestionList[i])
-		i = i +1 
-		points = points + 0
-		
+	if message.text.lower() == 'факты о вирусе':
+		bot.send_message(message.chat.id, random.choice(VirusHack))
 
-	if i == 16 and 1>a:
-# markup activation 
-		bot.send_message(message.chat.id, ".", reply_markup = markupHobbi)
-		print(points)
-		a = 6 
-# Hobbi and output films + poster 
-#it checks the hobby and the number of points in their values and decides what to give to the user
-	if message.text.lower() == 'i like sports':
-		
-		Sport = True
 
-		if points <= 3:
-			SportFilm1 = open('sport/1.jpg', 'rb')
-			SportFilm1t = "The film is based on the true story of Richmond High School basketball coach Ken Carter (played by Samuel L. Jackson), who made headlines in 1999 for suspending his undefeated high school basketball team due to poor academic results. The story was conceived from a screenplay co-written by John Gatins and Mark Schwahn, who created the TV series One Tree Hill. "
 
-			bot.send_message(message.chat.id, SportFilm1t)
-			bot.send_photo(message.chat.id, SportFilm1)
-
-		if points >=4 and points <=6:
-			SportFilm2 = open('sport/2.jpg', 'rb')
-			SportFilm2t = 'Sunderland Til I Die is a sports documentary series, released on Netflix on 14 December 2018. The series is produced by Fulwell 73, and documents the events around English football club Sunderland A.F.C. during their 2017–18 season which saw them relegated from the EFL Championship.'
-
-			bot.send_message(message.chat.id, SportFilm2t)
-			bot.send_photo(message.chat.id, SportFilm2)
-
-		if points >=7 and points <=9:
-			SportFilm3 = open('sport/3.jpg', 'rb')
-			SportFilm3t = 'The Game Changers is a 2018 documentary film about the benefits of plant-based eating for athletes. It covers multiple success stories of plant-based athletes, references scientific studies, and touches on other arguments for plant-based diets that extend to non-athletes.'
-
-			bot.send_message(message.chat.id, SportFilm3t)
-			bot.send_photo(message.chat.id, SportFilm3)
-
-		if points >=10 and points <= 12:
-			SportFilm4 = open('sport/4.jpg', 'rb')
-			SportFilm4t = 'Legend No. 17 (Russian: Легенда №17) is a 2013 Russian biographical sports film directed by Nikolai Lebedev and produced by Trite Studio. The film is based on real events and tells of the rise to fame of the Soviet hockey player Valeri Kharlamov and about the first match of the Summit Series USSR — Canada 1972.'
-
-			bot.send_message(message.chat.id, SportFilm4t)
-			bot.send_photo(message.chat.id, SportFilm4)
-
-		if points >=13:
-			SportFilm5 = open('sport/5.jpg', 'rb')
-			SportFilm5t = 'Synopsis. Philadelphia Pennsylvania, home to the number one underdog fighter, Rocky Balboa (Sylvester Stalone). The date is November 25, 1975, Rocky is fighting Spider Rico in a prize fight at a local church arena. ... Rocky, after recovering from the hit, goes after Spider and finishes him off'
-
-			bot.send_message(message.chat.id, SportFilm5t)
-			bot.send_photo(message.chat.id, SportFilm5)
-
-
-	if message.text.lower() == 'ульяна':
-		EasterEgg = open('music/EasterEgg.jpg', 'rb')
-		bot.send_message(message.chat.id, "😈РОЦК😈")
-		bot.send_photo(message.chat.id, EasterEgg)
-
-
-	if message.text.lower() == 'i like art':
-		if points <= 3:
-			ArtFilm1 = open('atr/1.jpg', 'rb')
-			ArtFilm1t = 'Abstract: The Art of Design is a Netflix original documentary series highlighting artists in the field of design. It was released on Netflix on February 10, 2017. The series was created by former Wired editor-in-chief Scott Dadich.'
-
-			bot.send_message(message.chat.id,ArtFilm1t)
-			bot.send_photo(message.chat.id, ArtFilm1)
-
-		if points >=4 and points <=6:
-			ArtFilm2 = open('atr/2.jpg', 'rb')
-			ArtFilm2t = "Little Ashes is a 2008 Spanish-British drama film set against the backdrop of Spain during the 1920s and 1930s, as three of the era's most creative young talents meet at university and set off on a course to change their world. Luis Buñuel watches helplessly as the friendship between surrealist painter Salvador Dalí and the poet Federico García Lorca develops into a love affair."
-
-			bot.send_message(message.chat.id, ArtFilm2t)
-			bot.send_photo(message.chat.id, ArtFilm2)
-
-		if points >=7 and points <=9:
-			ArtFilm3 = open('atr/3.jpg', 'rb')
-			ArtFilm3t = 'Pollock is a 2000 American biographical film which tells the life story of American painter Jackson Pollock. It stars Ed Harris, Marcia Gay Harden, Jennifer Connelly, Robert Knott, Bud Cort, Molly Regan and Sada Thompson, and was directed by Harris.'
-
-			bot.send_message(message.chat.id, ArtFilm3t)
-			bot.send_photo(message.chat.id, ArtFilm3)
-
-		if points >=10 and points <= 12:
-			ArtFilm4 = open('atr/4.png', 'rb')
-			ArtFilm4t = "Girl with a Pearl Earring is a 1999 historical novel written by Tracy Chevalier. Set in 17th-century Delft, Holland, the novel was inspired by local painter Johannes Vermeer's Girl with a Pearl Earring. Chevalier presents a fictional account of Vermeer, the model and the painting. "
-
-			bot.send_message(message.chat.id, ArtFilm4t)
-			bot.send_photo(message.chat.id, ArtFilm4)
-
-		if points >=13:
-			ArtFilm5 = open('atr/5.jpg', 'rb')
-			ArtFilm5t = "The film is set in the south of France during World War I and stars Michel Bouquet, Christa Theret, Thomas Doret and Vincent Rottiers.[6] Renoir achieved critical and commercial success both in France and abroad, most notably in the United States where it is on the Critic's Pick list of The New York Times."
-
-			bot.send_message(message.chat.id, ArtFilm5t)
-			bot.send_photo(message.chat.id, ArtFilm5)
-
-
-	if message.text.lower() == 'i like cooking':
-		
-		Cooking = True
-
-		if points <=3:
-			CookingFilm1 = open('cooking/1.jpg', 'rb')
-			CookingFilm1t = "A rat named Remy dreams of becoming a great French chef despite his family's wishes and the obvious problem of being a rat in a decidedly rodent-phobic profession. When fate places Remy in the sewers of Paris, he finds himself ideally situated beneath a restaurant made famous by his culinary hero, Auguste Gusteau"
-
-			CookingFilm1 = open('cooking/1.jpg', 'rb')
-			CookingFilm1t = "A rat named Remy dreams of becoming a great French chef despite his family's wishes and the obvious problem of being a rat in a decidedly rodent-phobic profession. When fate places Remy in the sewers of Paris, he finds himself ideally situated beneath a restaurant made famous by his culinary hero, Auguste Gusteau"
-
-			bot.send_message(message.chat.id,CookingFilm1t)
-			bot.send_photo(message.chat.id, CookingFilm1)
-
-		if points >=4 and points <=6:
-			CookingFilm2 = open('cooking/2.jpg', 'rb')
-			CookingFilm2t = "Julie & Julia is a 2009 American comedy-drama film written and directed by Nora Ephron starring Meryl Streep, Amy Adams, Stanley Tucci, and Chris Messina. The film contrasts the life of chef Julia Child in the early years of her culinary career with the life of young New Yorker Julie Powell, who aspires to cook all 524 recipes in Child's cookbook in 365 days, a challenge she described on her popular blog that made her a published author"
-
-			CookingFilm2 = open('cooking/2.jpg', 'rb')
-			CookingFilm2t = "Julie & Julia is a 2009 American comedy-drama film written and directed by Nora Ephron starring Meryl Streep, Amy Adams, Stanley Tucci, and Chris Messina. The film contrasts the life of chef Julia Child in the early years of her culinary career with the life of young New Yorker Julie Powell, who aspires to cook all 524 recipes in Child's cookbook in 365 days, a challenge she described on her popular blog that made her a published author"
-
-			bot.send_message(message.chat.id, CookingFilm2t)
-			bot.send_photo(message.chat.id, CookingFilm2)
-
-		if points >=7 and points <=9:
-			CookingFilm3 = open('cooking/3.jpg', 'rb')
-			CookingFilm3t = "Le Chef (2012) A veteran chef faces off against his restaurant group's new CEO, who wants to the establishment to lose a star from its rating in order to bring in a younger chef who specializes in molecular gastronomy"
-
-			bot.send_message(message.chat.id, CookingFilm3t)
-			bot.send_photo(message.chat.id, CookingFilm3)
-
-		if points >=10 and points <= 12:
-			CookingFilm4 = open('cooking/4.jpg', 'rb')
-			CookingFilm4t = "Produced by David Kirkpatrick and Jonathan Filley for the Samuel Goldwyn Company, the film was met with largely positive reviews and grossed $14 million worldwide. It was nominated for the Grand Jury Prize at the Sundance Film Festival and the Grand Special Prize at the Deauville Film Festival."
-
-			bot.send_message(message.chat.id, CookingFilm4t)
-			bot.send_photo(message.chat.id, CookingFilm4)
-
-		if points >=13:
-			CookingFilm5 = open('cooking/5.jpeg', 'rb')
-			CookingFilm5t = "The film tells the story of Pascal Ichak, a French opera singer and chef living in Georgia, who opens a restaurant. It also shows the life in Georgia in the beginning of the 20th century, including its short period of independence (see Democratic Republic of Georgia). After the Bolshevik coup attempt of Georgia (1920), the chef refuses to emigrate and endures the brutalities of the new regime."
-
-			bot.send_message(message.chat.id, CookingFilm5t)
-			bot.send_photo(message.chat.id, CookingFilm5)
-
-
-	if message.text.lower() == 'i am motorist':
-		
-		Cooking = True
-
-		if points <=3:
-			MotoristFilm1 = open('motorist/1.jpg', 'rb')
-			MotoristFilm1t ="Need for Speed is a 2014 sports action thriller film directed and co-edited by Scott Waugh and written by George and John Gatins. It is the film adaptation of the racing video game franchise of the same name by Electronic Arts. The film stars Aaron Paul, Dominic Cooper, Imogen Poots, Scott Mescudi, Ramón Rodríguez, Rami Malek, and Michael Keaton. It tells the story of street racer Tobey Marshall, who sets off to race cross-country as a way of avenging his friend's death at the hands of a rival racer, Dino Brewster"
-
-			bot.send_message(message.chat.id, MotoristFilm1t)
-			bot.send_photo(message.chat.id, MotoristFilm1)
-
-		if points >=4 and points <=6:
-			MotoristFilm2 = open('motorist/2.jpg', 'rb')
-			MotoristFilm2t = "Taxi is a 2004 action comedy film directed by Tim Story and starring Queen Latifah, Jimmy Fallon, Gisele Bündchen, Jennifer Esposito, and Ann-Margret. It is a remake of the 1998 French film of the same name. An incompetent New York police officer is banned from driving and comes to rely on a talented taxi driver to help him solve a series of bank robberies. The film was panned by critics."
-
-			bot.send_message(message.chat.id, MotoristFilm2t)
-			bot.send_photo(message.chat.id, MotoristFilm2)
-
-		if points >=7 and points <=9:
-			MotoristFilm3 = open('motorist/3.jpg', 'rb')
-			MotoristFilm3t = "Gone in 60 Seconds (also known as Gone in Sixty Seconds) is a 2000 American action heist film starring Nicolas Cage, Angelina Jolie, Giovanni Ribisi, Christopher Eccleston, Robert Duvall, Vinnie Jones, and Will Patton. The film was directed by Dominic Sena, written by Scott Rosenberg, and produced by Jerry Bruckheimer. The film is a loose remake of the 1974 H.B. Halicki film of the same name."
-
-			bot.send_message(message.chat.id, MotoristFilm3t)
-			bot.send_photo(message.chat.id, MotoristFilm3)
-
-		if points >=10 and points <= 12:
-			MotoristFilm4 = open('motorist/4.jpg', 'rb')
-			MotoristFilm4t = "Max leads a good life with Alice and their son Théo; that is until Alice is threatened with death while waiting for a heart transplant. Max promises Théo that he will save Alice, but to keep his word he must find a heart, and fast. Since time is running out and he must find a solution, Max decides to reconnect with his troubled past. His decision will change his life in ways he could never have imagined"
-
-			bot.send_message(message.chat.id, MotoristFilm4t)
-			bot.send_photo(message.chat.id, MotoristFilm4)
-
-		if points >=13:
-			MotoristFilm5 = open('motorist/5.jpg', 'rb')
-			MotoristFilm5t = "A young boy travels across Australia with his father, who's wanted by the law for committing a violent crime."
-
-			bot.send_message(message.chat.id, MotoristFilm5t)
-			bot.send_photo(message.chat.id, MotoristFilm5)
-
-
-# it films + poster  
-	if message.text.lower() == 'i like video games and it':
-		
-		Cooking = True
-
-		if points <=3:
-			Itfilms1 = open('it/1.jpg', 'rb')
-			Itfilms1t = "A dramatic thriller based on real events that reveals the quest to expose the deceptions and corruptions of power that turned an Internet upstart into the 21st century's most fiercely debated organization. "
-
-			bot.send_message(message.chat.id,Itfilms1t)
-			bot.send_photo(message.chat.id,Itfilms1)
-
-		if points >=4 and points <=6:
-			Itfilms2 = open('it/2.jpg', 'rb')
-			Itfilms2t = "Augmentation developer Hanka Robotics establishes a secret project to develop an artificial body, or shell, that can integrate a human brain rather than an AI. The sole survivor of a terrorist attack which killed her parents, Mira Killian is chosen as the test subject after her body is damaged beyond repair "
-
-			bot.send_message(message.chat.id,Itfilms2t)
-			bot.send_photo(message.chat.id,Itfilms2)
-
-		if points >=7 and points <=9:
-			Itfilms3 = open('it/3.jpg', 'rb')
-			Itfilms3t = "Blackhat is a 2015 American action thriller film produced and directed by Michael Mann and starring Chris Hemsworth, Tang Wei, Viola Davis, Holt McCallany, and Wang Leehom. The film premiered at the TCL Chinese Theatre in Los Angeles on January 8, 2015, and was released in theaters on January 16.[4] Blackhat was a box office bomb, earning only $19.7 million at the box office against a budget of $70 million. While the film received generally mixed reviews, with criticisms focused on casting and pace, the film appeared on some critics' year-end lists. "
-
-			bot.send_message(message.chat.id,Itfilms3t)
-			bot.send_photo(message.chat.id,Itfilms3)
-
-		if points >=10 and points <= 12:
-			Itfilms4 = open('it/4.jpg', 'rb')
-			Itfilms4t = "The NSA's illegal surveillance techniques are leaked to the public by one of the agency's employees, Edward Snowden, in the form of thousands of classified documents distributed to the press. "
-
-			bot.send_message(message.chat.id,Itfilms4t)
-			bot.send_photo(message.chat.id,Itfilms4)
-
-		if points >=13:
-			Itfilms5 = open('it/5.jpg', 'rb')
-			Itfilms5t = "Durov's Code. The real story of Vkontakte and its Creator  is a novel by Nikolai Kononov about the creators of the largest social network in Europe, Vkontakte. It is an experiment with the genre of biography and biographical investigation at the intersection of journalism and essays, based on facts and interviews "
-
-			bot.send_message(message.chat.id,Itfilms5t)
-			bot.send_photo(message.chat.id,Itfilms5)
-
-
-# music films + poster  
-
-	if message.text.lower() == 'i like music':
-		
-		
-		if points <=3:
-			MusicFilms1 = open("music/1.jpg", 'rb')
-
-			MusicFilms1t = "The story of the life and career of the legendary rhythm and blues musician Ray Charles, from his humble beginnings in the South, where he went blind at age seven, to his meteoric rise to stardom during the 1950s and 1960s."
-
-			bot.send_message(message.chat.id, MusicFilms1t)
-
-			bot.send_photo(message.chat.id, MusicFilms1)
-
-		if points >=4 and points <=6:
-			MusicFilms2 = open("music/2.jpg", 'rb')
-			MusicFilms2t = "Walk the Line is a 2005 American biographical musical romantic drama film directed by James Mangold. The screenplay, written by Mangold and Gill Dennis, is based on two autobiographies authored by singer-songwriter Johnny Cash, 1975's Man in Black: His Own Story in His Own Words and 1997's Cash: The Autobiography. The film follows Cash's early life, his romance with June Carter, and his ascent in the country music scene. It stars Joaquin Phoenix as Cash, Reese Witherspoon as Carter, Ginnifer Goodwin as Cash's first wife Vivian Liberto, and Robert Patrick as Cash's father."
-
-			bot.send_message(message.chat.id, MusicFilms2t)
-			bot.send_photo(message.chat.id, MusicFilms2)
-
-		if points >=7 and points <=9:
-			MusicFilms3 = open("music/3.jpg", 'rb')
-			MusicFilms3t = "Turo (25) is trying to overcome his fears by leading the most unknown heavy metal band in Finland, Impaled Rektum, to the hottest metal festival of Norway. The journey includes heavy metal, grave robbing, Viking heaven and an armed conflict between Finland and Norway."
-
-			bot.send_message(message.chat.id, MusicFilms3t)
-			bot.send_photo(message.chat.id, MusicFilms3)
-
-		if points >=10 and points <= 12:
-			MusicFilms4 = open("music/4.png", 'rb')
-			MusicFilms4t = "Bohemian Rhapsody is a 2018 musical biographical drama film about Freddie Mercury, the lead singer of the British rock band Queen. It was directed by Bryan Singer from a screenplay by Anthony McCarten, and produced by Graham King and Queen manager Jim Beach. It stars Rami Malek as Mercury, with Lucy Boynton, Gwilym Lee, Ben Hardy, Joe Mazzello, Aidan Gillen, Tom Hollander, Allen Leech, and Mike Myers in supporting roles. Queen members Brian May and Roger Taylor served as consultants. A British-American venture, the film was produced by 20th Century Fox, Regency Enterprises, GK Films, and Queen Films, with Fox serving as distributor. The film follows the singer's life from the formation of the band up to their 1985 Live Aid performance at the original Wembley Stadium."
-
-			bot.send_message(message.chat.id, MusicFilms4t)
-			bot.send_photo(message.chat.id, MusicFilms4)
-
-		if points >=13:
-			MusicFilms5 = open("music/5.jpg", 'rb')
-			MusicFilms5t = "A boat approaches the Pirate Radio ship and drops off Young Carl (Tom Sturridge), a young man who has been expelled from school for smoking marijuana. He has been sent to spend time with his godfather Quentin (Bill Nighy), who owns the ship, allegedly to straighten him out."
-
-			bot.send_message(message.chat.id, MusicFilms5t)
-			bot.send_photo(message.chat.id, MusicFilms5)
+	if message.text.lower() == 'как выжить?':
+		bot.send_message(message.chat.id, random.choice(SaveYourselfList))
 
 # top 15 logik 
 
-	if message.text.lower() == 'tv series':
+	if message.text.lower() == 'топ 15 сериалов':
 
 # markup activation 
-
 		bot.send_message(message.chat.id, Top15serieslist, reply_markup = markupSeries )
-	if message.text.lower() == 'friends':
+	if message.text.lower() == 'друзья':
 
-		Series1text  = "The main characters are six friends-Rachel, Monica, Phoebe, Joey, Chandler and Ross. Three girls and three guys who are friends, live next door, kill time together and resist the harsh reality, share their secrets and sometimes fall very much in love."
+		Series1text  = "Главные герои - шестеро друзей - Рейчел, Моника, Фиби, Джоуи, Чендлер и Росс. Три девушки и три парня, которые дружат, живут по соседству, вместе убивают время и противостоят жестокой реальности, делятся своими секретами и иногда очень сильно влюбляются."
 		Series1photo = open('seriesphoto/1.jpg', 'rb')
 
 		bot.send_photo(message.chat.id, Series1photo)
 		bot.send_message(message.chat.id, Series1text)
 
-	if message.text.lower() == 'game of thrones':
-		Series2text = "Game of Thrones is an American fantasy drama television series created by David Benioff and D. B. Weiss for HBO. It is an adaptation of A Song of Ice and Fire, George R. R. Martin's series of fantasy novels, the first of which is A Game of Thrones. The show was both produced and filmed in Belfast and elsewhere in the United Kingdom. Filming locations also included Canada, Croatia, Iceland, Malta, Morocco, and Spain.[4] The series premiered on HBO in the United States on April 17, 2011, and concluded on May 19, 2019, with 73 episodes broadcast over eight seasons."
+	if message.text.lower() == 'игра престолов':
+		Series2text = "К концу подходит время благоденствия, и лето, длившееся почти десятилетие, угасает. Вокруг средоточия власти Семи королевств, Железного трона, зреет заговор, и в это непростое время король решает искать поддержки у друга юности Эддарда Старка. В мире, где все — от короля до наемника — рвутся к власти, плетут интриги и готовы вонзить нож в спину, есть место и благородству, состраданию и любви. Между тем, никто не замечает пробуждение тьмы из легенд далеко на Севере — и лишь Стена защищает живых к югу от нее."
 		Series2photo =  open('seriesphoto/2.jpg', 'rb')
 
 		bot.send_photo(message.chat.id, Series2photo)
 		bot.send_message(message.chat.id, Series2text)
 
-	if message.text.lower() == 'boardwalk empire':
-		Series3text = "Set in the Prohibition era of the 1920s Boardwalk Empire is the story of Enoch Nucky Thompson, the treasurer of Atlantic County, Atlantic City, New Jersey. Due to his relationships with mobsters as well as political contacts, the Federal Government start to take an interest in him. His lavish lifestyle seems at odds with his position, and as well as his connections, there is prolific bootlegging in the area."
+	if message.text.lower() == 'подпольная империя':
+		Series3text = "1920 год. Через несколько часов Атлантик-Сити - столица развлечений и порока, как и вся Америка, вступит в эпоху «Сухого закона». Енох «Наки» Томпсон, днем – городской казначей, а ночью – хитроумный гангстер со связями на самом «верху», решает воспользоваться ситуацией и получить баснословные прибыли на подпольной торговле алкоголем. Однако не он один жаждет обогатиться на новом промысле…"
 		Series3photo = open('seriesphoto/3.jpg', 'rb')
 
 		bot.send_photo(message.chat.id, Series3photo)
 		bot.send_message(message.chat.id, Series3text)
 
-	if message.text.lower() == 'breaking bad':
-		Series4text = "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future."
+	if message.text.lower() == 'во все тяжкие':
+		Series4text = "Школьный учитель химии Уолтер Уайт узнаёт, что болен раком лёгких. Учитывая сложное финансовое состояние дел семьи, а также перспективы, Уолтер решает заняться изготовлением метамфетамина. Для этого он привлекает своего бывшего ученика Джесси Пинкмана, когда-то исключённого из школы при активном содействии Уайта. Пинкман сам занимался варкой мета, но накануне, в ходе рейда УБН, он лишился подельника и лаборатории."
 		Series4photo = open('seriesphoto/4.jpg', 'rb')
 
 		bot.send_photo(message.chat.id, Series4photo)
 		bot.send_message(message.chat.id, Series4text
 			)
-	if message.text.lower() == 'planet earth':
+	if message.text.lower() == 'планета земля':
 		Series5photo = open('seriesphoto/5.jpg', 'rb')
-		Series5text = "Millions of years ago incredible forces ripped apart the Earth’s crust creating seven extraordinary continents. One Planet: Seven Worlds, presented by Sir David Attenborough, will reveal how each distinct continent has shaped the unique animal life found there. This series will feature remarkable, new animal behaviour from all the continents including the baking plains of Africa and the frozen waters off Antarctica. In Asia, the biggest of all continents, we will showcase life at the extremes, whilst in Europe we will reveal surprising wildlife dramas hidden right alongside us."
+		Series5text = "Создатели сериала «Голубая планета» сняли новый фильм, показывающий Землю такой, какой ее еще никто не видел прежде. Невероятные по красоте пейзажи и самые заповедные и малоизученные уголки нашей планеты. Четыре года напряженной работы и беспрецедентный для документального фильма бюджет позволили создать уникальный по масштабности фильм. А революционные режимы сверхскоростной съемки и детализации картинки, сделали возможным показать великолепие нашей природы во всех подробностях."
 
 		bot.send_photo(message.chat.id, Series5photo)
 		bot.send_message(message.chat.id, Series5text)
 
-	if message.text.lower() == 'chernobyl':
+	if message.text.lower() == 'чернобыль':
 		Series6photo = open('seriesphoto/6.jpg', 'rb')
-		Series6text = "In April 1986, an explosion at the Chernobyl nuclear power plant in the Union of Soviet Socialist Republics becomes one of the world's worst man-made catastrophes."
+		Series6text = "Сериал о ужасной катострофе потрясщей весь мир."
 
 		bot.send_photo(message.chat.id, Series6photo)
 		bot.send_message(message.chat.id, Series6text)
 
-	if message.text.lower() == 'house, m.d.':
+	if message.text.lower() == 'доктор хаус':
 		Series7photo = open('seriesphoto/7.jpg', 'rb')
-		Series7text ="House often clashes with his fellow physicians, including his own diagnostic team, because many of his hypotheses about patients' illnesses are based on subtle or controversial insights. His flouting of hospital rules and procedures frequently leads him into conflict with his boss, hospital administrator and Dean of Medicine Dr. Lisa Cuddy(Lisa Edelstein). House's only true friend is Dr. James Wilson(Robert Sean Leonard), head of the Department of Oncology."
+		Series7text ="Сериал рассказывает о команде врачей, которые должны правильно поставить диагноз пациенту и спасти его. Возглавляет команду доктор Грегори Хаус, который ходит с тростью после того, как его мышечный инфаркт в правой ноге слишком поздно правильно диагностировали. Как врач Хаус просто гений, но сам не отличается проникновенностью в общении с больными и с удовольствием избегает их, если только есть возможность."
 
 		bot.send_photo(message.chat.id, Series7photo)
 		bot.send_message(message.chat.id, Series7text)
 
-	if message.text.lower() == 'sherlock':
+	if message.text.lower() == 'шерлок':
 		Series8photo = open('seriesphoto/8.jpg', 'rb')
-		Series8text ="A modern update finds the famous sleuth and his doctor partner solving crime in 21st century London."
+		Series8text ="События разворачиваются в наши дни. Он прошел Афганистан, остался инвалидом. По возвращении в родные края встречается с загадочным, но своеобразным гениальным человеком. Тот в поиске соседа по квартире. Лондон, 2010 год. Происходят необъяснимые убийства. Скотланд-Ярд без понятия, за что хвататься. Существует лишь один человек, который в силах разрешить проблемы и найти ответы на сложные вопросы."
 
 		bot.send_photo(message.chat.id, Series8photo)
 		bot.send_message(message.chat.id, Series8text)
 
-	if message.text.lower() == 'peaky blinders':
+	if message.text.lower() == 'острые козырьки':
 		Series9photo = open('seriesphoto/9.jpg', 'rb')
-		Series9text = "Peaky Blinders is a British period crime drama television series created by Steven Knight. Set in Birmingham, England, the series follows the exploits of the Shelby crime family in the direct aftermath of the First World War. The fictional family is loosely based on a real 19th century urban youth gang of the same name, who were active in the city from the 1890s to the early twentieth century."
+		Series9text = "Британский сериал о криминальном мире Бирмингема 20-х годов прошлого века, в котором многолюдная семья Шелби стала одной из самых жестоких и влиятельных гангстерских банд послевоенного времени. Фирменным знаком группировки, промышлявшей грабежами и азартными играми, стали зашитые в козырьки лезвия."
 
 		bot.send_photo(message.chat.id, Series9photo)
 		bot.send_message(message.chat.id, Series9text)
 
-	if message.text.lower() == 'true detective':
+	if message.text.lower() == 'настоящий детектив':
 
 		Series10photo = open('seriesphoto/10.jpg', 'rb')
 		Series10text = "True Detective-это американский антологический криминальный сериал, созданный и написанный Ником Пиццолатто . Премьера сериала, транслируемого премиальной кабельной сетью HBO в США, состоялась 12 января 2014 года. Каждый сезон сериала структурирован как самостоятельное повествование, использующее новые актерские ансамбли и следующие различным наборам персонажей и настроек."
@@ -680,103 +392,103 @@ def text(message):
 		bot.send_photo(message.chat.id, Series10photo)
 		bot.send_message(message.chat.id, Series10text)
 
-	if message.text.lower() == 'firefly':
+	if message.text.lower() == '13 причин почему':
 		Series11photo = open('seriesphoto/11.jpg', 'rb')
-		Series11text = "Captain Malcolm Reynolds — a battle-hardened veteran of the galactic civil war who fought on the wrong (losing) side, makes a living from petty crime and transports cargo on his ship, the serenity. He leads a small motley team that looks like a very ordinary family-its members are always quarreling, do not observe discipline, but will never betray their captain and follow him to the ends of the world."
+		Series11text = "Однажды Клэй Дженсен находит на пороге своего дома коробку с аудиокассетами, записанными Ханной Бейкер. Он был влюблен в эту девушку в школе, пока она однажды не покончила жизнь самоубийством. В своих записях Ханна указала 13 причин, которые толкнули её на это. И Клэй - одна из них."
 
 		bot.send_photo(message.chat.id, Series11photo)
 		bot.send_message(message.chat.id, Series11text)
 
-	if message.text.lower() == 'the big bang theory':
+	if message.text.lower() == 'теория большого взрыва':
 		Series12photo = open('seriesphoto/12.jpg', 'rb')
-		Series12text = "The Big Bang Theory is a comedy about brilliant physicists, Leonard and Sheldon, who are the kind of beautiful minds that understand how the universe works. But none of that genius helps them interact with people, especially women. All this begins to change when a free-spirited beauty named Penny moves in next door."
+		Series12text = "Два блестящих физика Леонард и Шелдон - великие умы, которые понимают, как устроена вселенная. Но их гениальность ничуть не помогает им общаться с людьми, особенно с женщинами. Всё начинает меняться, когда напротив них поселяется красавица Пенни. Стоит также отметить пару странных друзей этих физиков: Воловиц который любит употреблять фразы на разных языках, включая русский, а Раджеш Кутрапали теряет дар речи при виде женщин."
 
 		bot.send_photo(message.chat.id, Series12photo)
 		bot.send_message(message.chat.id, Series12text)
 
-	if message.text.lower() == 'band of brothers':
+	if message.text.lower() == 'братья по оружию':
 		Series13photo = open('seriesphoto/13.jpg', 'rb')
-		Series13text = "Band of Brothers is a WWII miniseries based off of the book of the same name by Stephen Ambrose, that follows the men of Easy Company, 2nd Battalion, 506th Parachute Infantry Regiment, 101st Airborne Division.Taking place from 1942-1945, and following from the Airborne Infantry's training at camp Toccoa, Georgia, USA, to variuos places in Europe, notably Normandy France, Holland, Belgium and Germany - it is set during the European theater of World War II. Band of Brothers was created by Tom Hanks, Gary Goetzman, and Steven Spielberg, and is owned by Dreamworks and Playtone."
+		Series13text = "В сериале рассказывается о боевом пути роты E («Easy») 2-го батальона 506-го парашютно-десантного полка 101-й воздушно-десантной дивизии США от тренировочного лагеря в Таккоа, штат Джорджия, через высадку в Нормандии, операцию «Маркет Гарден» и Бастонское сражение до конца войны."
 
 		bot.send_photo(message.chat.id, Series13photo)
 		bot.send_message(message.chat.id, Series13text)
 
-	if message.text.lower() == 'sex education':
+	if message.text.lower() == 'половое воспитание':
 		Series14photo = open('seriesphoto/14.jpeg', 'rb')
-		Series14text = "Sex Education is a British comedy-drama web television series created by Laurie Nunn. Starring Asa Butterfield as a socially awkward teenager and Gillian Anderson as his character's mother and a sex therapist, the series premiered on 11 January 2019 on Netflix. Ncuti Gatwa, Emma Mackey, Connor Swindells, and Kedar Williams-Stirling co-star. It became a critical and commercial success for Netflix, with over 40 million viewers streaming the first series after its debut. The second series was released on 17 January 2020, and the show has been renewed for a third series."
+		Series14text = "Cтеснительный и необщительный подросток-девственник Отис живёт с мамой, которая работает секс-терапевтом. Объединившись с одноклассницей Мэйв, Отис проводит сеансы терапии для своих сверстников, чтобы помочь им разобраться с неловкими и запутанными ситуациями."
 
 		bot.send_photo(message.chat.id, Series14photo)
 		bot.send_message(message.chat.id, Series14text)
 
-	if message.text.lower() == 'the sopranos':
+	if message.text.lower() == 'клан сопрано':
 		Series15photo = open('seriesphoto/15.jpg', 'rb')
-		Series15text = "New Jersey mob boss Tony Soprano deals with personal and professional issues in his home and business life that affect his mental state, leading him to seek professional psychiatric counseling."
+		Series15text = "Повседневная жизнь современного Крестного отца: его мысли - стремительны, действия - решительны, а юмор - черен. Мафиозный босс Северного Джерси Тони Сопрано успешно справляется с проблемами `Семьи`. Но вот собственная семья немного подкачала: дети от рук отбились, брак - под угрозой, мамаша - пилит. Он надеется на помощь психиатра, но как тому рассказать обо всех своих проблемах, если связан омертой - обетом молчания, нарушать который нельзя под страхом смерти?"
 
 		bot.send_photo(message.chat.id, Series15photo)
 		bot.send_message(message.chat.id, Series15text)
 
 
 # markup activation 
-	if message.text.lower() == "main menu":
+	if message.text.lower() == "основное меню":
 
 # back to main menu
 		bot.send_message(message.chat.id, "Here we go again!", reply_markup = markup)
-	if message.text.lower() == "films":
+	if message.text.lower() == "топ 15 фильмов":
 # markup activation 
 		bot.send_message(message.chat.id, Top15Films, reply_markup = markupFilms)
 
-	if message.text.lower() == 'the lord of the rings: the return of the king':
-		Films1text  = "The Lord of the Rings: The Return of the King (2003) is the third and final film in the trilogy, directed by Peter Jackson and based on J.R.R. Tolkien's The Lord of the Rings."
+	if message.text.lower() == 'властелин колец':
+		Films1text  = "Снятая режиссёром Питером Джексоном серия из трёх связанных единым сюжетом кинофильмов, представляющая собой экранизацию романа Дж. Р. Р. Толкина «Властелин колец»."
 		Films1photo = open('films/1.jpg', 'rb')
 
 		bot.send_photo(message.chat.id, Films1photo)
 		bot.send_message(message.chat.id, Films1text)
 
-	if message.text.lower() == 'terminator':
-		Films2text = "The Terminator is a 1984 American science fiction film directed by James Cameron. It stars Arnold Schwarzenegger as the Terminator, a cyborg assassin sent back in time from 2029 to 1984 to kill Sarah Connor (Linda Hamilton), whose son will one day become a savior against machines in a post-apocalyptic future."
+	if message.text.lower() == 'терминатор':
+		Films2text = "История противостояния солдата Кайла Риза и киборга-терминатора, прибывших в 1984-й год из пост-апокалиптического будущего, где миром правят машины-убийцы, а человечество находится на грани вымирания. Цель киборга: убить девушку по имени Сара Коннор, чей ещё нерождённый сын к 2029 году выиграет войну человечества с машинами. Цель Риза: спасти Сару и остановить Терминатора любой ценой."
 		Films2photo =  open('films/2.jpg', 'rb')
 
 		bot.send_photo(message.chat.id, Films2photo)
 		bot.send_message(message.chat.id, Films2text)
 	
-	if message.text.lower() == 'the shawshank redemption':
-		Films3text = "The Shawshank Redemption is a 1994 American drama film written and directed by Frank Darabont, based on the 1982 Stephen King novella Rita Hayworth and Shawshank Redemption. It tells the story of banker Andy Dufresne (Tim Robbins), who is sentenced to life in Shawshank State Penitentiary for the murders of his wife and her lover, despite his claims of innocence."
+	if message.text.lower() == 'побег из шоушенка':
+		Films3text = "Бухгалтер Энди Дюфрейн обвинён в убийстве собственной жены и её любовника. Оказавшись в тюрьме под названием Шоушенк, он сталкивается с жестокостью и беззаконием, царящими по обе стороны решётки. Каждый, кто попадает в эти стены, становится их рабом до конца жизни. Но Энди, обладающий живым умом и доброй душой, находит подход как к заключённым, так и к охранникам, добиваясь их особого к себе расположения."
 		Films3photo = open('films/3.jpg', 'rb')
 
 		bot.send_photo(message.chat.id, Films3photo)
 		bot.send_message(message.chat.id, Films3text)
 
-	if message.text.lower() == 'forrest gump':
-		Films4text = " The story depicts several decades in the life of Forrest Gump (Hanks), a slow-witted but kind-hearted man from Alabama who witnesses and unwittingly influences several defining historical events in the 20th century United States. "
+	if message.text.lower() == 'форрест гамп':
+		Films4text = "От лица главного героя Форреста Гампа, слабоумного безобидного человека с благородным и открытым сердцем, рассказывается история его необыкновенной жизни. Фантастическим образом превращается он в известного футболиста, героя войны, преуспевающего бизнесмена. Он становится миллиардером, но остается таким же бесхитростным, глупым и добрым. Форреста ждет постоянный успех во всем, а он любит девочку, с которой дружил в детстве, но взаимность приходит слишком поздно."
 		Films4photo = open('films/4.jpg', 'rb')
 
 		bot.send_photo(message.chat.id, Films4photo)
 		bot.send_message(message.chat.id, Films4text)
 
-	if message.text.lower() == 'schindler`s list':
+	if message.text.lower() == 'список шиндлера':
 		Films5photo = open('films/5.jpg', 'rb')
-		Films5text = "The film follows Oskar Schindler, a Sudeten German businessman who together with his wife Emilie Schindler saved more than a thousand mostly Polish-Jewish refugees from the Holocaust by employing them in his factories during World War II. It stars Liam Neeson as Schindler, Ralph Fiennes as SS officer Amon Göth, and Ben Kingsley as Schindler's Jewish accountant Itzhak Stern."
+		Films5text = "Фильм рассказывает реальную историю загадочного Оскара Шиндлера, члена нацистской партии, преуспевающего фабриканта, спасшего во время Второй мировой войны почти 1200 евреев."
 
 		bot.send_photo(message.chat.id, Films5photo)
 		bot.send_message(message.chat.id, Films5text)
 
-	if message.text.lower() == 'titanic':
+	if message.text.lower() == 'титаник':
 		Films6photo = open('films/6.jpg', 'rb')
-		Films6text = "A love story doomed by the depths of the Atlantic Ocean. Rose Calvert, now 101 reminiscences her experience of the Titanic, to American oceanic explorers, and her emotional connection with another passenger, Jack. Jack was an American starving artist who won a trip home on the Ship of Dreams to a lucky hand in poker."
+		Films6text = "В первом и последнем плавании шикарного «Титаника» встречаются двое. Пассажир нижней палубы Джек выиграл билет в карты, а богатая наследница Роза отправляется в Америку, чтобы выйти замуж по расчёту. Чувства молодых людей только успевают расцвести, и даже не классовые различия создадут испытания влюблённым, а айсберг, вставший на пути считавшегося непотопляемым лайнера."
 
 		bot.send_photo(message.chat.id, Films6photo)
 		bot.send_message(message.chat.id, Films6text)
 
-	if message.text.lower() == 'the green mile':
+	if message.text.lower() == 'зелёная миля':
 		Films7photo = open('films/7.jpg', 'rb')
-		Films7text ="The Green Mile is a 1999 American prison fantasycrime drama film written and directed by Frank Darabont and based on Stephen King’s 1996 novel of the same name. It stars Tom Hanks as a death rowcorrections officer during the U.S. Great Depression who witnesses supernatural events that occur after an enigmatic inmate (Michael Clarke Duncan)"
+		Films7text ="Пол Эджкомб - начальник блока смертников в тюрьме «Холодная гора», каждый из узников которого однажды проходит «зеленую милю» по пути к месту казни. Пол повидал много заключённых и надзирателей за время работы. Однако гигант Джон Коффи, обвинённый в страшном преступлении, стал одним из самых необычных обитателей блока."
 
 		bot.send_photo(message.chat.id, Films7photo)
 		bot.send_message(message.chat.id, Films7text)
 
-	if message.text.lower() == 'avatar':
+	if message.text.lower() == 'аватар':
 		Films8photo = open('films/8.jpg', 'rb')
-		Films8text ="The film is set in the mid-22nd century when humans are colonizing Pandora, a lush habitable moon of a gas giant in the Alpha Centauri star system, in order to mine the mineral unobtanium, a room-temperature superconductor The expansion of the mining colony threatens the continued existence of a local tribe of Na'vi – a humanoid species indigenous to Pandora. The film's title refers to a genetically engineered Na'vi body operated from the brain of a remotely located human that is used to interact with the natives of Pandora"
+		Films8text ="Джейк Салли - бывший морской пехотинец, прикованный к инвалидному креслу. Несмотря на немощное тело, Джейк в душе по-прежнему остается воином. Он получает задание совершить путешествие в несколько световых лет к базе землян на планете Пандора, где корпорации добывают редкий минерал, имеющий огромное значение для выхода Земли из энергетического кризиса."
 
 		bot.send_photo(message.chat.id, Films8photo)
 		bot.send_message(message.chat.id, Films8text)
@@ -791,139 +503,140 @@ def text(message):
 # best film ever 
 		bot.send_message(message.chat.id, Films9text)
 	
-	if message.text.lower() == 'back to the future':
+	if message.text.lower() == 'назад в будущее':
 		Films10photo = open('films/10.jpg', 'rb')
-		Films10text = "Marty McFly, a 17 year old high school student gets lost in 1955 by an accident, 30 years back in time. With the help of his friend Dr. Emmet Brown, he is desperately trying to find his way back to the future in the year 1985. It becomes a battle against the clock."
+		Films10text = "Подросток Марти с помощью машины времени, сооружённой его другом-профессором доком Брауном, попадает из 80-х в далекие 50-е. Там он встречается со своими будущими родителями, ещё подростками, и другом-профессором, совсем молодым."
 
 		bot.send_photo(message.chat.id, Films10photo)
 		bot.send_message(message.chat.id, Films10text)
 
-	if message.text.lower() == 'the matrix':
+	if message.text.lower() == 'матрица':
 		Films11photo = open('films/11.jpg', 'rb')
-		Films11text = "Morpheus awakens Neo to the real world, a ravaged wasteland where most of humanity have been captured by a race of machines that live off of the humans' body heat and electrochemical energy and who imprison their minds within an artificial reality known as the Matrix"
+		Films11text = "Жизнь Томаса Андерсона разделена на две части: днём он - самый обычный офисный работник, получающий нагоняи от начальства, а ночью превращается в хакера по имени Нео, и нет места в сети, куда он не смог бы дотянуться. Но однажды всё меняется — герой, сам того не желая, узнаёт страшную правду: всё, что его окружает — не более, чем иллюзия, Матрица, а люди — всего лишь источник питания для искусственного интеллекта, поработившего человечество. И только Нео под силу изменить расстановку сил в этом чужом и страшном мире."
 
 		bot.send_photo(message.chat.id, Films11photo)
 		bot.send_message(message.chat.id, Films11text)
 
-	if message.text.lower() == 'the godfather':
+	if message.text.lower() == 'крёстный отец':
 		Films12photo = open('films/12.jpg', 'rb')
-		Films12text = "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son. The Godfather Don Vito Corleone is the head of the Corleone mafia family in New York. He is at the event of his daughter's wedding. ... But tragic circumstances make him face the legacy of his family."
+		Films12text = "Криминальная сага, повествующая о нью-йоркской сицилийской мафиозной семье Корлеоне. Фильм охватывает период 1945-1955 годов. Глава семьи, Дон Вито Корлеоне, выдаёт замуж свою дочь. В это время со Второй мировой войны возвращается его любимый сын Майкл. Майкл, герой войны, гордость семьи, не выражает желания заняться жестоким семейным бизнесом. Дон Корлеоне ведёт дела по старым правилам, но наступают иные времена, и появляются люди, желающие изменить сложившиеся порядки. На Дона Корлеоне совершается покушение."
 
 
 		bot.send_photo(message.chat.id, Films12photo)
 		bot.send_message(message.chat.id, Films12text)
 
-	if message.text.lower() == 'the dark knight':
+	if message.text.lower() == 'тёмный рыцарь':
 		Films13photo = open('films/13.jpg', 'rb')
-		Films13text = " A gang of criminals rob a Gotham City mob bank, murdering each other for a higher share of the money until only the Joker remains, who escapes with the money. Batman, District Attorney Harvey Dent and Lieutenant James Gordon form an alliance to rid Gotham City of organized crime"
+		Films13text = " Бэтмен поднимает ставки в войне с криминалом. С помощью лейтенанта Джима Гордона и прокурора Харви Дента он намерен очистить улицы от преступности, отравляющей город. Сотрудничество оказывается эффективным, но скоро они обнаружат себя посреди хаоса, развязанного восходящим криминальным гением, известным испуганным горожанам под именем Джокер."
 
 		bot.send_photo(message.chat.id, Films13photo)
 		bot.send_message(message.chat.id, Films13text)
 
-	if message.text.lower() == 'gladiator':
+	if message.text.lower() == 'гладиатор':
 		Films14photo = open('films/14.jpg', 'rb')
-		Films14text = "The film's plot was influenced by two 1960s Hollywood films of the sword-and-sandal genre, The Fall of the Roman Empire and Spartacus, and shares several plot points with The Fall of the Roman Empire, which tells the story of Livius, who, like Maximus in Gladiator, is Marcus Aurelius's intended successor."
+		Films14text = "В великой Римской империи не было военачальника, равного генералу Максимусу. Непобедимые легионы, которыми командовал этот благородный воин, боготворили его и могли последовать за ним даже в ад. Но случилось так, что отважный Максимус, готовый сразиться с любым противником в честном бою, оказался бессилен против вероломных придворных интриг. Генерала предали и приговорили к смерти. Чудом избежав гибели, Максимус становится гладиатором. Быстро снискав себе славу в кровавых поединках, он оказывается в знаменитом римском Колизее, на арене которого он встретится в смертельной схватке со своим заклятым врагом..."
 
 		bot.send_photo(message.chat.id, Films14photo)
 		bot.send_message(message.chat.id, Films14text)
 
-	if message.text.lower() == 'braveheart':
+	if message.text.lower() == 'храброе сердце':
 
 		Films15photo = open('films/15.jpg', 'rb')
-		Films15text = "Braveheart is a 1995 American epic historical fiction war film directed and co-produced by Mel Gibson, who portrays William Wallace, a late-13th-century Scottish warrior. The film depicts the life of Wallace leading the Scots in the First War of Scottish Independence against King Edward I of England. The film also stars Sophie Marceau, Patrick McGoohan and Catherine McCormack. The story is inspired by Blind Harry's epic poem The Actes and Deidis of the Illustre and Vallyeant Campioun Schir William Wallace and was adapted for the screen by Randall Wallace."
+		Films15text = "Действие фильма начинается в 1280 году в Шотландии. Это история легендарного национального героя Уильяма Уоллеса, посвятившего себя борьбе с англичанами при короле Эдварде Длинноногом. Он рано лишился отца, погибшего от рук англичан, и его забрал к себе дядя Оргайл, который дал ему хорошее образование в Европе. На родину Уильям возвращается уже взрослым человеком, мечтающим завести семью и жить мирной жизнью. Но судьба распорядилась иначе. Его невесту убили англичане, и он начал свой крестовый поход за свободу."
 
 		bot.send_photo(message.chat.id, Films15photo)
 		bot.send_message(message.chat.id, Films15text)
-	if message.text.lower() == 'book':
+
+	if message.text.lower() == 'топ 15 книг':
 		bot.send_message(message.chat.id, Top15Book, reply_markup =markupBook)
 
-	if message.text.lower() == 'big sky':
+	if message.text.lower() == 'большое небо':
 		Book1Photo = open('book/1.jpg', 'rb')
-		Book1t = 'Jackson Brodie’s back. Fans have been counting the days to read the fifth instalment in Kate Atkinson’s literary crime series about the tough ex-soldier turned private investigator, and Big Sky is well worth the wait. This time round Brodie has moved to a quiet seaside village in the northeast, occasionally joined by his tricky teenage son and his ex-partner’s ageing labrador. But once again he gets drawn into a sinister investigation and old secrets come to the fore. Superbly written and utterly readable, this novel is a delight from start to finish.'
+		Book1t = 'История о непростой жизни и судьбе двух друзей-летчиков из Сибири, которая тронет каждого'
 		bot.send_photo(message.chat.id, Book1Photo)
 		bot.send_message(message.chat.id, Book1t)
 
-	if message.text.lower() == 'sweet sorrow':
+	if message.text.lower() == 'сто тысяч раз прощай':
 		Book2Photo = open('book/2.jpg', 'rb')
-		Book2t = 'Sweet Sorrow is another of this summer’s most eagerly awaited novels. David Nicholls, who recently won a Bafta for his TV adaptation of the Patrick Melrose novels, made his name with One Day and excels at writing tender, funny books about love and friendship. This coming-of-age novel tells the story of 16-year-old Charlie Lewis and his love affair with a girl he meets when he reluctantly gets involved in a production of Romeo and Juliet. It’s poignant and insightful but the most affecting scenes focus on Charlie’s relationship with his dad, whose life has imploded in a disastrous way.'
+		Book2t = 'Лето 1997 года. Чарли Льюис уверен, что провалил школьные выпускные экзамены, и о будущем старается не думать. Он подрабатывает на бензоколонке, разъезжает по окрестностям на велосипеде, избегает собственного отца и читает старую фантастику. Но однажды на лугу возле «Усадьбы Фоли» он встретит Фран Фишер — и с ней в его жизнь придет надежда. Однако цена этой надежды высока — знакомство с Шекспиром. А Театральный кооператив «На дне морском» завлекает в свои сети покрепче иной секты…'
 		bot.send_photo(message.chat.id, Book2Photo)
 		bot.send_message(message.chat.id, Book2t)
 
-	if message.text.lower() == 'machines like me':
+	if message.text.lower() == 'машины как я':
 		Book3Photo = open('book/3.jpg', 'rb')
-		Book3t = 'From the case of a young boy who refuses medical treatment on religious grounds (The Children Act) to the angst of a young couple honeymooning on the Dorset coast (On Chesil Beach), Ian McEwan’s choice of subjects is never predictable. Machines Like Me, his 15th novel, is set in an alternative 1980s London.'
+		Book3t = 'В своей новой книге один из лучших британских писателей задает самые важные вопросы: что делает нас людьми? Что определяет наши поступки и внутренний мир? Может ли машина понять человеческое сердце? В центре сюжета - альтернативная история. Британия проиграла Фолклендскую войну, а Алан Тьюринг сделал прорыв в создании искусственного интеллекта: этот мир отличен от нашего, и даже любовь в нем живет по другим законам.В альтернативном Лондоне 1980-х заблудший неудачник Чарли влюбляется в Миранду - девушку, в прошлом которой большая тайна. Когда Чарли вдруг разживается деньгами, он первым делом покупает Адама - одного из первых андроидов. Вместе с Мирандой они создают Адаму личность. Новое существо - почти идеальный человек. И вскоре троица образует любовный треугольник.'
 		bot.send_photo(message.chat.id, Book3Photo)
 		bot.send_message(message.chat.id, Book3t)
 
-	if message.text.lower() == 'normal people':
+	if message.text.lower() == 'нормальные люди':
 		Book4Photo = open('book/4.jpg', 'rb')
-		Book4t = 'Sally Rooney’s Normal People has won a host of awards, including both the top prize and fiction book of the year at this year’s British Book Awards, the Costa novel award and Waterstones Book of the Year. The 28-year-old Irish novelist has been described as “a millennial writer with millennial concerns” but readers of all ages will enjoy her story of two college friends who try to stay apart but find they can’t. We can’t wait to see what she does next.'
+		Book4t = 'Коннелл и Марианна растут в одном маленьком городке в сельской Ирландии. На этом сходство заканчивается; они из очень разных миров. Когда они оба зарабатывают места в Тринити-колледже в Дублине, их судьбы связываються на долго длится долго.'
 		bot.send_photo(message.chat.id, Book4Photo)
 		bot.send_message(message.chat.id, Book4t)
 
-	if message.text.lower() == 'the silent patient':
+	if message.text.lower() == 'безмолвный пациент':
 		Book5Photo = open('book/5.jpg', 'rb')
-		Book5t = 'Alex Michaelides was inspired to write his debut novel while he was doing a postgraduate course in psychotherapy and working part-time at a secure psychiatric unit. It’s the tale of Alicia Berenson, a painter who lives with her fashion photographer husband Gabriel on the edge of Hampstead Heath. But when Gabriel returns late one night from a fashion shoot Alicia shoots him dead. Psychotherapist Theo Faber is fascinated by the fact that Alicia has never spoken since the shooting and five years on is determined to discover exactly what happened. A smart, sophisticated psychological thriller.'
+		Book5t = 'Жизнь Алисии Беренсон кажется идеальной. Известная художница вышла замуж за востребованного модного фотографа. Она живет в одном из самых привлекательных и дорогих районов Лондона в роскошном доме с большими окнами, выходящими в парк. Однажды поздним вечером, когда ее муж Габриэль возвращается домой с очередной съемки, Алисия пять раз стреляет ему в лицо. И с тех пор не произносит ни слова. Отказ Алисии говорить или давать какие-либо объяснения будоражит общественное воображение. Тайна делает художницу знаменитой. И в то время как сама она находится на принудительном лечении, цена ее последней работы – автопортрета с единственной надписью по-гречески "Алкеста" – стремительно растет. Тео Фабер – криминальный психотерапевт. Он долго ждал возможности поработать с Алисией, заставить ее говорить. '
 		bot.send_photo(message.chat.id, Book5Photo)
 		bot.send_message(message.chat.id, Book5t)
 
-	if message.text.lower() == 'those people':
+	if message.text.lower() == 'эти люди':
 		Book6Photo = open('book/6.jpg', 'rb')
-		Book6t = 'Louise Candlish won the crime and thriller book of the year for Our House and her latest novel is equally gripping. Lowland Way in south London is a suburban paradise, with friendly neighbours, convivial chat and children playing in the street. Everything seems perfect till Darren and Jodie move in and cause havoc and upset with their loud music, multiple cars and disruptive building work. A clever, pacey novel that will keep you guessing right until the end.'
+		Book6t = 'Лованд вей - загородная мечта. Дома красивые, соседи обожают, а дети играют вместе по выходным. Но когда Даррен и Джоди входят в дом на углу, они не следуют правилам. Они запускают музыку в любое время, начинают неприглядный ремонт и управляют бизнесом подержанных автомобилей со своего двора. Всеобъемлющая война не займет много времени, чтобы начать назревать.Затем в начале субботы ужасная смерть потрясает улицу. По мере того как полиция разыскивает свидетелей, начинают выдвигаться обвинения, и каждому есть что скрывать.'
 		bot.send_photo(message.chat.id, Book6Photo)
 		bot.send_message(message.chat.id, Book6t)
 
-	if message.text.lower() == 'the sleepwalker':
+	if message.text.lower() == 'лунатик':
 		Book7Photo = open('book/7.jpg', 'rb')
-		Book7t = 'Former bookseller Joseph Knox is an exciting new name in crime fiction. The Sleepwalker is the third of his series about Aidan Watts, a flawed Manchester detective with a complex family background. As the novel opens, Waits is on duty in an abandoned hospital ward, sitting with a dying murderer and hoping he’ll reveal the location of his final victim before he dies. Dark, gritty and compelling, this will have you turning the pages until the early hours of the morning.'
+		Book7t = 'Когда Аннали Альберг пропадает, ее дети боятся худшего. Аннали - лунатик, чья болезнь проявляется как причудливо, так и разрушительно.'
 		bot.send_photo(message.chat.id, Book7Photo)
 		bot.send_message(message.chat.id, Book7t)
 
-	if message.text.lower() == 'no way out':
+	if message.text.lower() == 'за закрытыми дверями':
 		Book8Photo = open('book/8.jpg', 'rb')
-		Book8t = 'From Brideshead Revisited to the Inspector Morse books, Oxford is the setting for some remarkable novels. Cara Hunter is the latest novelist to set her books in the city – to striking effect. No Way Out is her third novel about detective inspector Adam Fawley and it’s a cracking read. It’s the Christmas holidays and two children have just been pulled from the wreckage of their home in upmarket north Oxford. The toddler is dead and his elder brother is fighting for his life – but why were they left alone? Switch off your phone and settle down on the sofa. You won’t be able to put this book down until you’ve found out what happened – and who’s responsible.'
+		Book8t = 'Дело происходит в аду. Сартровский ад, впрочем, совсем не похож на христианский: здание с бесконечным рядом камер для пыток, ни чертей, ни раскаленных сковородок, ни прочих ужасов. Каждая из комнат — всего-навсего банальный гостиничный номер с бронзовыми подсвечниками на камине и тремя разноцветными диванчиками по стенкам. Правда, он все-таки несколько переоборудован: нигде не заметно зеркал, окон тоже нет, дверь наглухо закрыта извне, звонок к коридорному не звонит, а электрический свет не гасится ни днем, ни ночью. Да и невозможно установить, какое сейчас время суток — в загробном мире время остановилось. Грешники обречены ни на минуту не смыкать глаз на веки вечные и за неимением зеркал искать свой облик в зрачках соседей, — вот и все уготованное им наказание, пытка бодрствованием, созерцанием друг друга, бессонницей, неусыпной мыслью.'
 		bot.send_photo(message.chat.id, Book8Photo)
 		bot.send_message(message.chat.id, Book8t)
 
-	if message.text.lower() == 'the garden of lost and found':
+	if message.text.lower() == 'сад потерянных и найденных людей':
 		Book9Photo = open('book/9.jpg', 'rb')
-		Book9t = 'In 1919 Liddy Horner discovers her celebrated artist husband, Ned, burning his best-known painting. Known as The Garden of Lost and Found, the picture depicts his two children on an idyllic day, playing in the garden of Nightingale House, the family’s Cotswolds home. Almost a century later, the couple’s granddaughter Juliet is sent the key to Nightingale House out of the blue and starts to unravel the tragic secrets of the past. Harriet Evans’s 11th novel is a spellbinding story, brimming with flowers and paintings, loss and courage.'
+		Book9t = 'Лидди Хорнер обнаруживает своего мужа, всемирно известного художника сэра Эдварда Хорнера, который сжигает свою самую известную картину «Сад потерянных и найденных» за несколько дней до своей внезапной смерти. Дом Найтингейл был любимым домом семейства Хорнеров - жемчужиной дизайна, созданной для того, чтобы вдохновлять на счастье - и именно здесь Нед нарисовал Сад потерянных и найденных, захватив своих детей в прекрасный день, играя в бродячем Эдеме, который он и Лидди сделали для них ,Один волшебный момент. Прежде чем все это рухнуло ... Когда правнучке Неда и Лиддис Джульетты посылают ключ от Дома Соловьев, она открывает дверь в забытый мир. Дом держит свои тайны близко, но она в поисках ответов.Что-то разрушило этот райский уголок. Но что? Погрузитесь в эту неутомимую историю о непреходящей силе семейной любви, рассказанную тремя поколениями необыкновенных женщин ...'
 		bot.send_photo(message.chat.id, Book9Photo)
 		bot.send_message(message.chat.id, Book9t)
 
-	if message.text.lower() == 'after the end':
+	if message.text.lower() == 'после конца':
 		Book10Photo = open('book/10.jpg', 'rb')
-		Book10t = 'Ex-police officer Clare Mackintosh has won legions of fans for her clever crime novels, I Let You Go, I See You and Let Me Lie. Her new book, After the End, is a radical departure, but just as powerful. Max and Pip are devoted to each other but when their young son Dylan is diagnosed with a brain tumour they face an impossible choice – and they can’t agree. This moving and thought-provoking theme is one that’s close to Mackintosh’s heart. As she explains in a note at the end of the book, in 2006 she and her husband had to decide whether to keep their critically ill son alive or remove his life support.'
+		Book10t = 'Третья мировая война испепелила мир после ядерного взрыва. Не многие счастливчики смогли скрыться на просторах Аляски. Они выживали в течение последующих тридцати лет живя за счет земли, буду наедине с природой и скрываясь от тех кто еще до сих пор мог жить там. По крайней мере, это было то, что рассказывали Джуно всю ее жизнь. Когда Джуно возвращается с охоты, она обнаруживает, что ее община исчезла, и она отправляется на их поиски. Покинув границы своей земли, она впервые узнает ужасающую новость. Войны никогда не было. Города никогда не были уничтожены. Мир не был разрушен. Все оказалось ложью. Теперь Джуно находится в современном мире, о котором даже и не подозревала. Но в то же время пока она пытается найти способ, дабы спасти своих друзей и семью, ее кто-то ищет. Тот, кто знает всю правду о ее тайном прошлом'
 		bot.send_photo(message.chat.id, Book10Photo)
 		bot.send_message(message.chat.id, Book10t)
 
-	if message.text.lower() == 'the flatshare':
+	if message.text.lower() == 'квартирный вопрос':
 		Book11Photo = open('book/11.jpg', 'rb')
-		Book11t = 'Beth O’Leary’s first novel is feel-good fiction at its best. The two protagonists, Tiffy Moore and Leon Twomey, are immensely likeable and the comic situation they find themselves in is entirely believable. Tiffy works in publishing and needs a cheap flat while palliative nurse Leon works nights and needs extra cash. The pair agree to share a one-bed flat, with Tiffy sleeping there at nights and weekends and Leon using it by day. It sounds simple, but with Tiffy’s horrible ex-boyfriend, demanding clients at work, Leon’s wrongly imprisoned brother and the fact that they still haven’t met, the situation gets more complicated by the day.'
+		Book11t = 'Тиффи Мур нужна дешевая квартира, и быстро. Леон Туми работает по ночам и нуждается в деньгах. Их друзья думают, что они сумасшедшие, но это идеальное решение: Леон занимает квартиру с одной кроватью, пока Тиффи на работе днем, и она управляет этим местом в остальное время.'
 		bot.send_photo(message.chat.id, Book11Photo)
 		bot.send_message(message.chat.id, Book11t)
 
-	if message.text.lower() == 'queenie':
+	if message.text.lower() == 'квини':
 		Book12Photo = open('book/12.jpg', 'rb')
-		Book12t = 'Candice Carty-Williams wrote her debut novel after bestselling author Jojo Moyes offered her the use of her rural cottage to finish the book, choosing her from more than 600 applicants. Queenie Jenkins is a young black woman who’s just broken up with her long-term boyfriend, Tom. Her boss at the newspaper where she works doesn’t appreciate her and her family never listens (they’re not interested unless the conversation is about Jesus or water rates). A fresh, funny and at times painful read.'
+		Book12t = 'Квини Дженкинс - 25-летняя ямайская британка, живущая в Лондоне, которая живет в двух культурах и не вписывается ни в одну из них. Она работает в национальной газете, где ей постоянно приходится сравнивать себя со своими сверстниками из среднего класса. После беспорядочного расставания со своим давним парнем Квини ищет утешения во всех неположенных местах включая компанию нескольких сомнительных людей. Когда необдуманные  решения зависит от другого, она задается вопросом: «Что я делаю? Почему? Кем я хочу стать? »- все вопросы, с которыми сегодняшняя женщина должна столкнуться в мире, пытаясь ответить на них, когда все хотят сделать это за нее.'
 		bot.send_photo(message.chat.id, Book12Photo)
 		bot.send_message(message.chat.id, Book12t)
 
-	if message.text.lower() == 'the doll factory':
+	if message.text.lower() == 'мастерская кукол':
 		Book13Photo = open('book/13.jpg', 'rb')
-		Book13t = "It’s astonishing to discover that this accomplished book is Elizabeth Macneal’s debut novel. Macneal is a writer and potter and worked in the City for several years before completing a creative writing MA at the University of East Anglia. Set amid the squalor and chaos of Victorian London, The Doll Factory is the tale of aspiring artist Iris, who becomes a model for Pre-Raphaelite artist Louis Frost on the condition that he teaches her to paint. But she’s also been noticed by Silas Reed, a sinister collector who is obsessed by strange and beautiful things. An atmospheric book that will stay with you long after you’ve finished reading."
+		Book13t = "Рыжеволосая Айрис работает в мастерской, расписывая лица фарфоровых кукол. Ей хочется стать настоящей художницей, но это едва ли осуществимо в викторианской Англии. По ночам Айрис рисует себя с натуры перед зеркалом. Это становится причиной ее ссоры с сестрой-близнецом, и Айрис бросает кукольную мастерскую. На улицах Лондона она встречает художника-прерафаэлита Луиса. Он предлагает Айрис стать натурщицей, а взамен научит ее рисовать масляными красками. Первая же картина с Айрис становится событием, ее прекрасные рыжие волосы восхищают Королевскую академию художеств. Но еще у нее появляется поклонник Сайлас Рид- чудак из лавки редкостей, страстный коллекционер. Ни Луис, ни Айрис пока не подозревают, что он жаждет сделать девушку жемчужиной своей коллекции."
 		bot.send_photo(message.chat.id, Book13Photo)
 		bot.send_message(message.chat.id, Book13t)
 
-	if message.text.lower() == 'city of girls':
+	if message.text.lower() == 'город женщин':
 		Book14Photo = open('book/14.jpg', 'rb')
-		Book14t = 'Elizabeth Gilbert is best-known for Eat Pray Love, the 2006 memoir that chronicled her journey across Italy, India and Indonesia. In City of Girls, her third novel, she turns her attention to 1940s New York and a rundown, midtown theatre called The Lily. Nineteen-year-old Vivian Morris has dropped out of her sophomore year at Vassar and her despairing parents send her to stay with her unconventional Aunt Peg, who owns The Lily. Once there, Vivian makes firm friends with the showgirls, throws herself into their hedonistic lifestyle and learns some tough lessons. Glamorous and vivid, with fascinating historical detail.'
+		Book14t = 'Это грандиозный роман о сверкающем и дерзком театральном мире Нью-Йорка 1940-х годов, мире бурлеска, свободы и любви. Роман про женщин, разрушающих общественные стереотипы того времени и находящих свой путь к счастью. 1940 год. Девятнадцатилетнюю Вивиан Моррис выгоняют из колледжа за неуспеваемость, и родители отправляют ее на Манхэттен к тете Пег, владелице экстравагантного театрика под названием "Лили". И неискушенная девушка с головой окунается в причудливый мир бойких танцовщиц, красавцев-актеров, приставучих сценаристов и прожженных импресарио – в волшебный мир бурлеска.'
 		bot.send_photo(message.chat.id, Book14Photo)
 		bot.send_message(message.chat.id, Book14t)
 
-	if message.text.lower() == 'circe':
+	if message.text.lower() == 'цирцея':
 		Book15Photo = open('book/15.jpg', 'rb')
-		Book15t = 'Madeline Miller won the Orange prize in 2012 for her first novel, A Song for Achilles and earlier this year Circe, her long-awaited second novel, was one of the six shortlisted contenders for the Women’s Prize for Fiction (previously the Orange prize). Miller takes the legendary story of Circe, who appeared in ancient Greek texts like Homer’s The Odyssey, and brings it alive for a 21st century audience. A captivating book that races along with verve and panache.'
+		Book15t = 'В доме Гелиоса, бога солнца и могущественнейшего из титанов, рождается дочь. Но Цирцея-странное дитя: не такая могущественная, как ее отец, и не такая зловеще привлекательная, как ее мать. Обратившись за помощью к миру смертных, она обнаруживает, что действительно обладает силой—силой колдовства, которая может превращать соперников в монстров и угрожать самим богам. Угрожая ей, Зевс изгоняет ее на необитаемый остров, где она оттачивает свое оккультное мастерство, приручает диких зверей и встречается со многими из самых известных фигур во всей мифологии, включая Минотавра, Дедала и его обреченного сына Икара, убийцу Медею и, конечно же, коварного Одиссея. Но есть опасность и для одинокой женщины, и Цирцея невольно навлекает на себя гнев как мужчин, так и богов, в конечном счете оказавшись лицом к лицу с одним из самых страшных и мстительных олимпийцев. Чтобы защитить то, что она любит больше всего, Цирцея должна собрать все свои силы и выбрать, раз и навсегда, принадлежит ли она богам, от которых она родилась, или смертным, которых она полюбила. ..'
 		bot.send_photo(message.chat.id, Book15Photo)
 		bot.send_message(message.chat.id, Book15t)
 
